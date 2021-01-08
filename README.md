@@ -74,7 +74,49 @@ _An application that will keep track of machine repairs within Dr. Sillystringz'
 
 #### Import Database with SQL Schema
 
-_Open MySQL Workbench and paste the following Schema Create Statement to replicate the database and its tables._
+_Open MySQL Workbench and paste the following Schema Create Statement to replicate the database and its tables:_
+
+```
+CREATE DATABASE IF NOT EXISTS chelsea_becker;
+USE chelsea_becker;
+
+DROP TABLE IF EXISTS `_efmigrationshistory`;
+CREATE TABLE `__efmigrationshistory` (
+  `MigrationId` varchar(95) NOT NULL,
+  `ProductVersion` varchar(32) NOT NULL,
+  PRIMARY KEY (`MigrationId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+DROP TABLE IF EXISTS `engineermachine`;
+CREATE TABLE `engineermachine` (
+  `EngineerMachineId` int NOT NULL AUTO_INCREMENT,
+  `EngineerId` int NOT NULL,
+  `MachineId` int NOT NULL,
+  PRIMARY KEY (`EngineerMachineId`),
+  KEY `IX_EngineerMachine_EngineerId` (`EngineerId`),
+  KEY `IX_EngineerMachine_MachineId` (`MachineId`),
+  CONSTRAINT `FK_EngineerMachine_Engineers_EngineerId` FOREIGN KEY (`EngineerId`) REFERENCES `engineers` (`EngineerId`) ON DELETE CASCADE,
+  CONSTRAINT `FK_EngineerMachine_Machines_MachineId` FOREIGN KEY (`MachineId`) REFERENCES `machines` (`MachineId`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+DROP TABLE IF EXISTS `engineers`;
+CREATE TABLE `engineers` (
+  `EngineerId` int NOT NULL AUTO_INCREMENT,
+  `EngineerName` longtext,
+  `License` longtext,
+  PRIMARY KEY (`EngineerId`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+DROP TABLE IF EXISTS `machines`;
+CREATE TABLE `machines` (
+  `MachineId` int NOT NULL AUTO_INCREMENT,
+  `MachineName` longtext,
+  `LicenseReqd` longtext,
+  PRIMARY KEY (`MachineId`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+```
+
+
 
 //TODO need to place schema here
 
