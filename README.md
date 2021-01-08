@@ -66,7 +66,7 @@ _An application that will keep track of machine repairs within Dr. Sillystringz'
 2. _From the top navigation bar, follow:_ ```Server > Data Import```.
 4. _Select the option_ `Import from Self-Contained File`.
 5. _Set_ `Default Target Schema` _or create new schema._
-6. _Select the schema objects you would like to import_
+6. _Select the schema objects you would like to import._
 7. _To finalize, click_ `Start Import`.
 
 #### Import Database with SQL Schema
