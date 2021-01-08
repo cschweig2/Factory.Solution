@@ -4,12 +4,12 @@
 
 @model Factory.Models.Engineer
 
-<h1>Are you sure you would like to delete this engineer from the roster?</h1>
+<h1>Are you sure you would like to remove this engineer from the roster?</h1>
 <h3>Engineer Name: @Html.DisplayFor(model => model.EngineerName)</h3>
 
 @using (Html.BeginForm())
 {
-    <input type="submit" value="Delete">
+    <input type="submit" value="Remove">
 }
 <p>@Html.ActionLink("Cancel and Go Back to Engineer Roster", "Index")</p>
 <p>@Html.ActionLink("Back to Home", "Index", "Home")</p>
