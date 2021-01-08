@@ -13,6 +13,7 @@ namespace Factory.Models
 
         public int MachineId { get; set; }
         public string MachineName { get; set; }
+        public string LicenseReqd { get; set; }
         public virtual ICollection<EngineerMachine> Engineers { get; set; }
     }
 }

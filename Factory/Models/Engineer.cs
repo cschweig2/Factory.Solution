@@ -12,7 +12,7 @@ namespace Factory.Models
         }
         public int EngineerId { get; set; }
         public string EngineerName { get; set; }
-        public string Certification { get; set; }
+        public string License { get; set; }
         public ICollection<EngineerMachine> Machines { get; set; }
     }
 }
