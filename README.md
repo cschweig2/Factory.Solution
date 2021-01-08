@@ -21,9 +21,16 @@ _An application that will keep track of machine repairs within Dr. Sillystringz'
   <td>"As the factory manager, I need to be able to see a list of all engineers, and I need to be able to see a list of all machines."</td>
   <td>True</td>
 </tr>
+<tr>
   <td>2</td>
   <td>"As the factory manager, I need to be able to select a engineer, see their details, and see a list of all machines that engineer is licensed to repair. I also need to be able to select a machine, see its details, and see a list of all engineers licensed to repair it."</td>
   <td>True</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>"As the factory manager, I need to add new engineers to our system when they are hired. I also need to add new machines to our system when they are installed."</td>
+  <td>True</td>
+</tr>
 </table>
 <br>
 
