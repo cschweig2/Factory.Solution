@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace Template.Models
+namespace Factory.Models
 {
-    public class Thing
+    public class Engineer
     {
     }
 }

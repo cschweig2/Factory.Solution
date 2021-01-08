@@ -3,23 +3,23 @@ using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 
-namespace Template.Models
+namespace Factory.Models
 {
-    public class TemplateContextFactory : IDesignTimeDbContextFactory<TemplateContext>
+    public class FactoryContextFactory : IDesignTimeDbContextFactory<FactoryContext>
     {
-        TemplateContext IDesignTimeDbContextFactory<TemplateContext>.CreateDbContext(string[] args)
+        FactoryContext IDesignTimeDbContextFactory<FactoryContext>.CreateDbContext(string[] args)
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            var builder = new DbContextOptionsBuilder<TemplateContext>();
+            var builder = new DbContextOptionsBuilder<FactoryContext>();
             var connectionString = configuration.GetConnectionString("DefaultConnection");
 
             builder.UseMySql(connectionString);
 
-            return new TemplateContext(builder.Options);
+            return new FactoryContext(builder.Options);
         }
     }
 }

@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Template.Models
+namespace Factory.Models
 {
-    public class TemplateContext : DbContext
+    public class FactoryContext : DbContext
     {
         // public virtual DbSet<Object> Objects { get; set; }
 
-        public TemplateContext(DbContextOptions options) : base(options) { }
+        public FactoryContext(DbContextOptions options) : base(options) { }
     }
 }
