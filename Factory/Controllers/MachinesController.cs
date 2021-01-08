@@ -89,7 +89,7 @@ namespace Factory.Controllers
                 _db.EngineerMachine.Add(new EngineerMachine() { MachineId = MachineId, EngineerId = engineer.EngineerId });
             }
             _db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Details");
         }
 
     }

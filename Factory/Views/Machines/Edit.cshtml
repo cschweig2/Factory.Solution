@@ -18,10 +18,7 @@
     @Html.TextBoxFor(model => model.LicenseReqd)
 
     @Html.Label("Engineers Assigned: ")
-    @foreach (var join in Model.Engineers)
-    {
-        @Html.RadioButtonFor(model => model.EngineerName, "join.Engineer.EngineerId")
-    }
+    @Html.DropDownList("EngineerId")
 }
 <p>@Html.ActionLink("Back to Machine Roster", "Index")</p>
 <p>@Html.ActionLink("Back to Home", "Index", "Home")</p>
