@@ -1,7 +1,12 @@
 body {
-    background-color: blue;
+    background-color: #53a0ac;
 }
 
 h1 {
-    color:burlywood;
+    color:rgb(221, 221, 221);
+}
+
+a:link, a:hover, a:visited {
+    color: black;
+    font-style: italic;
 }
