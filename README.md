@@ -18,7 +18,7 @@ _An application that will keep track of machine repairs within Dr. Sillystringz'
 </tr>
 <tr>
   <td>1</td>
-  <td>As a factory manager, I want to be able to add engineers so that I can track which engineers are licensed to repair certain machines."</td>
+  <td>"As the factory manager, I need to be able to see a list of all engineers, and I need to be able to see a list of all machines."</td>
   <td>True</td>
 </tr>
 </table>
