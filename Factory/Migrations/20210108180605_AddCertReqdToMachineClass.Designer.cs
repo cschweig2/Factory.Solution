@@ -2,14 +2,16 @@
 using Factory.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Factory.Migrations
 {
     [DbContext(typeof(FactoryContext))]
-    partial class FactoryContextModelSnapshot : ModelSnapshot
+    [Migration("20210108180605_AddCertReqdToMachineClass")]
+    partial class AddCertReqdToMachineClass
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,9 +23,9 @@ namespace Factory.Migrations
                     b.Property<int>("EngineerId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("EngineerName");
+                    b.Property<string>("Certification");
 
-                    b.Property<string>("License");
+                    b.Property<string>("EngineerName");
 
                     b.HasKey("EngineerId");
 
@@ -53,7 +55,7 @@ namespace Factory.Migrations
                     b.Property<int>("MachineId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("LicenseReqd");
+                    b.Property<string>("CertReqd");
 
                     b.Property<string>("MachineName");
 
