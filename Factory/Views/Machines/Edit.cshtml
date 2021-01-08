@@ -1,0 +1,27 @@
+@{
+    Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<h1>Edit Machine Information</h1>
+<h3>Machine Name: @Html.DisplayFor(model => model.MachineName)</h3>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.MachineId)
+
+    @Html.Label("Machine Name: ")
+    @Html.TextBoxFor(model => model.MachineName)
+
+    @Html.Label("License Required for Operation")
+    @Html.TextBoxFor(model => model.LicenseReqd)
+
+    @Html.Label("Engineers Assigned: ")
+    @foreach (var join in Model.Engineers)
+    {
+        @Html.RadioButtonFor(model => model.EngineerName, "join.Engineer.EngineerId")
+    }
+}
+<p>@Html.ActionLink("Back to Machine Roster", "Index")</p>
+<p>@Html.ActionLink("Back to Home", "Index", "Home")</p>
