@@ -31,6 +31,11 @@ _An application that will keep track of machine repairs within Dr. Sillystringz'
   <td>"As the factory manager, I need to add new engineers to our system when they are hired. I also need to add new machines to our system when they are installed."</td>
   <td>True</td>
 </tr>
+<tr>
+  <td>4</td>
+  <td>"As the factory manager, I should be able to add new machines even if no engineers are employed. I should also be able to add new engineers even if no machines are installed."</td>
+  <td>True</td>
+</tr>
 </table>
 <br>
 
