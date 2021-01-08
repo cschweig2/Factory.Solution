@@ -1,0 +1,16 @@
+@{
+    Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<h1>Are you sure you would like to remove this machine from the roster?</h1>
+<h3>Machine Name: @Html.DisplayFor(model => model.MachineName)</h3>
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="remove">
+}
+
+<p>@Html.ActionLink("Cancel and Go Back to Machine Roster", "Index")</p>
+<p>@Html.ActionLink("Back to Home", "Index", "Home")</p>
