@@ -18,12 +18,16 @@ else
     @foreach (var join in Model.Engineers)
     {
         <li><p>@Html.ActionLink($"{join.Engineer.EngineerName}", "Details", "Engineers", new { id = join.Engineer.EngineerId})</p></li>
+        @using (Html.BeginForm("DeleteEngineer", "Machines"))
+        {
+            @Html.Hidden("joinId", @join.EngineerMachineId)
+            <input type="submit" value="Remove Engineer">
+        }
     }
     </ul>
 }
 
 <p>@Html.ActionLink("Add an Engineer to this Machine", "AddEngineer", new { id = Model.MachineId })</p>
-<p>@Html.ActionLink("Remove an Engineer from this Machine", "DeleteEngineer", new { id = Model.MachineId })</p>
 <p>@Html.ActionLink("Edit This Machine", "Edit", new { id = Model.MachineId})</p>
 <p>@Html.ActionLink("Remove This Machine", "Delete", new { id = Model.MachineId})</p>
 <p>@Html.ActionLink("Back to Machine Roster", "Index")</p>
