@@ -36,6 +36,11 @@ _An application that will keep track of machine repairs within Dr. Sillystringz'
   <td>"As the factory manager, I should be able to add new machines even if no engineers are employed. I should also be able to add new engineers even if no machines are installed."</td>
   <td>True</td>
 </tr>
+<tr>
+  <td>5</td>
+  <td>"As the factory manager, I need to be able to add or remove machines that a specific engineer is licensed to repair. I also need to be able to modify this relationship from the other side, and add or remove engineers from a specific machine."</td>
+  <td>True</td>
+</tr>
 </table>
 <br>
 
