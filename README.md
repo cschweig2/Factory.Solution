@@ -41,6 +41,11 @@ _An application that will keep track of machine repairs within Dr. Sillystringz'
   <td>"As the factory manager, I need to be able to add or remove machines that a specific engineer is licensed to repair. I also need to be able to modify this relationship from the other side, and add or remove engineers from a specific machine."</td>
   <td>True</td>
 </tr>
+<tr>
+  <td>6</td>
+  <td>"I should be able to navigate to a splash page that lists all engineers and machines. Users should be able to click on an individual engineer or machine to see all the engineers/machines that belong to it."</td>
+  <td>True</td>
+</tr>
 </table>
 <br>
 
