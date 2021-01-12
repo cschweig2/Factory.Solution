@@ -112,14 +112,14 @@ CREATE TABLE `__efmigrationshistory` (
 DROP TABLE IF EXISTS `engineermachine`;
 CREATE TABLE `engineermachine` (
   `EngineerMachineId` int NOT NULL AUTO_INCREMENT,
-  `EngineerId` int NOT NULL,
-  `MachineId` int NOT NULL,
+  `EngineerId` int DEFAULT NULL,
+  `MachineId` int DEFAULT NULL,
   PRIMARY KEY (`EngineerMachineId`),
   KEY `IX_EngineerMachine_EngineerId` (`EngineerId`),
   KEY `IX_EngineerMachine_MachineId` (`MachineId`),
   CONSTRAINT `FK_EngineerMachine_Engineers_EngineerId` FOREIGN KEY (`EngineerId`) REFERENCES `engineers` (`EngineerId`) ON DELETE CASCADE,
   CONSTRAINT `FK_EngineerMachine_Machines_MachineId` FOREIGN KEY (`MachineId`) REFERENCES `machines` (`MachineId`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `engineers`;
 CREATE TABLE `engineers` (
@@ -127,7 +127,7 @@ CREATE TABLE `engineers` (
   `EngineerName` longtext,
   `License` longtext,
   PRIMARY KEY (`EngineerId`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `machines`;
 CREATE TABLE `machines` (
