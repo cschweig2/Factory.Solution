@@ -77,7 +77,7 @@ _An application that will keep track of machine repairs within Dr. Sillystringz'
 2. _Open web browser and go to https://github.com/cschweig2/Factory.Solution._
 3. _After clicking the green "code" button, you can copy the URL for the repository._
 4. _Open a terminal window, such as Command Prompt or Git Bash._<br>
-  4a. _Type in this command: "git clone", followed by the URL you just copied. The full command should look like this: "git clone https://github.com/cschweig2/Factory.Solution"._
+  4a. _Type in this command:_ `git clone`_, followed by the URL you just copied. The full command should look like this: "git clone https://github.com/cschweig2/Factory.Solution"._
 5. _View the code on your favorite text editor, such as Visual Studio Code._
 
 #### Download
@@ -88,11 +88,15 @@ _An application that will keep track of machine repairs within Dr. Sillystringz'
 
 #### Import Database in MySQL Workbench
 1. _Open MySQL Workbench and enter your password to open a server._
-2. _From the top navigation bar, follow:_ ```Server > Data Import```.
-4. _Select the option_ `Import from Self-Contained File`.
+2. _From the top navigation bar, follow:_ `Server > Data Import`_._
+4. _Select the option_ `Import from Self-Contained File`_._
+5. _Click the_ `...` _button to navigate to the project file folder_ `Factory` _and select_ `factory.sql`.
 5. _Set_ `Default Target Schema` _or create new schema._
 6. _Select the schema objects you would like to import._
-7. _To finalize, click_ `Start Import`.
+7. _To finalize, click_ `Start Import`_._
+
+#### Import Database with Entity Framework Core/Command Line
+1. _Navigate to the_ `Factory` _project folder and enter_ `dotnet ef database update` _in the command line, which will create the database in MySQL Workbench using the migrations from the_ `Migrations` _folder._
 
 #### Import Database with SQL Schema
 
@@ -143,8 +147,8 @@ CREATE TABLE `machines` (
 //TODO need to place schema here
 
 #### Final Steps
-1. _Navigate to the Factory and Factory.Tests folders and enter "dotnet restore" in the command line to install packages._
-2._After packages are installed in each of these folders, you may use "dotnet run" to both run and build the program._
+1. _Navigate to the_ `Factory` _and_ `Factory.Tests` _folders and enter_ `dotnet restore` _in the command line to install packages._
+2._After packages are installed in each of these folders, navigate to the_ `Factory` _folder and enter_ `dotnet run` _in the command line to both run and build the program._
 
 ## Known Bugs
 
